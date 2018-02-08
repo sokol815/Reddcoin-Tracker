@@ -16,4 +16,4 @@ window.mytracker = new tracker( 'RwNWaAQF22rUs72YgtTgCVrSpHBeqRB6CP', destinatio
 window.mytracker.tick();
 ```
 
-See [index.html](index.html)
+See [index.html](index.html) for an example.
