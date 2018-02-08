@@ -1,0 +1,35 @@
+<html>
+	<style>
+		body {
+			color: #ddd;
+			background-color: #333;
+		}
+
+		.boxHeader {
+			color: #f00;
+			font-weight: 900;
+		}
+
+		.rddData {
+			display: block;
+			border: 1px solid #ddd;
+			font-family: 'calibri';
+			width: 400px;
+			margin: 5px;
+			padding-left: 5px;
+			padding-right: 5px;
+			min-height: 40px;
+		}
+	</style>
+	<script src='funding.js'></script>
+	<script>
+		function onready() {
+			var destination = document.getElementById('myRddAddress');
+			window.mytracker = new tracker( 'RwNWaAQF22rUs72YgtTgCVrSpHBeqRB6CP', destination );
+			window.mytracker.autoTick();
+		}
+	</script>
+	<body onload="onready()">
+		<div class='rddData' id='myRddAddress'></div>
+	</body>
+</html>
