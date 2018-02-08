@@ -1,22 +1,8 @@
 (function(){
 	var util = {};
-	util.reddsightURL = (document.location.href.substr(0,4) == 'file' ? 'https://live.reddcoin.com/api/addr/{n}' : 'https://live.reddcoin.com/api/addr/{n}');
+	util.reddsightURL = 'https://live.reddcoin.com/api/addr/{n}';
 
-	util.tracker = function( address, destination, settings ) {
-		var defaultSettings = {
-			color: '#f00',
-			background: '#333'
-		};
-		if( settings == undefined ) {
-			settings = {};
-		}
-		var keys = Object.keys( defaultSettings );
-		for( var i = 0; i < keys.length; i++ ) {
-			if( settings[keys[i]] == undefined ) {
-				settings[keys[i]] = defaultSettings[keys[i]];
-			}
-		}
-
+	util.tracker = function( address, destination ) {
 		this.destination = destination;
 		this.address = address;
 	};
